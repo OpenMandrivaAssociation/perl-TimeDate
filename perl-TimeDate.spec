@@ -2,7 +2,7 @@
 %define	name	perl-%{module}
 %define	version	1.16
 %define	real_version	1.16
-%define	release	%mkrel 5
+%define	release	%mkrel 6
 
 Summary:	%{module} module for perl (Data_Type_Utilities/Time)
 Name:		%{name}
