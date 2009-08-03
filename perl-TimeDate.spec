@@ -1,27 +1,24 @@
-%define	module	TimeDate
-%define	name	perl-%{module}
-%define	version	1.16
-%define	real_version	1.16
-%define	release	%mkrel 8
+%define	upstream_name	 TimeDate
+%define	upstream_version 1.16
 
-Summary:	%{module} module for perl (Data_Type_Utilities/Time)
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl (Data_Type_Utilities/Time)
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{real_version}.tar.bz2
-Url:		http://www.cpan.org
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Requires:	perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/TimeDate/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Simple Time and Date module for perl.
 
 %prep
-%setup -q -n %{module}-%{real_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
  %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,5 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Date
 %{perl_vendorlib}/Time
 %{_mandir}/*/*
-
-
