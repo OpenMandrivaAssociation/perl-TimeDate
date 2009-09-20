@@ -1,5 +1,5 @@
 %define	upstream_name	 TimeDate
-%define	upstream_version 1.16
+%define	upstream_version 1.17
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	%{upstream_name} module for perl (Data_Type_Utilities/Time)
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/TimeDate/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/TimeDate/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
