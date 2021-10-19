@@ -16,21 +16,21 @@ BuildRequires:	perl-devel
 Simple Time and Date module for perl.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc MANIFEST README ChangeLog
 %{perl_vendorlib}/Date
 %{perl_vendorlib}/Time
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
