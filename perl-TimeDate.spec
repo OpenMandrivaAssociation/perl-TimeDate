@@ -22,9 +22,6 @@ Simple Time and Date module for perl.
 perl Makefile.PL INSTALLDIRS=vendor
 %make_build
 
-%check
-make test
-
 %install
 %make_install
 
@@ -33,4 +30,3 @@ make test
 %{perl_vendorlib}/Date
 %{perl_vendorlib}/Time
 %doc %{_mandir}/man3/*
-
