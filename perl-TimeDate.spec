@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
 Source0:	https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 
 %description
