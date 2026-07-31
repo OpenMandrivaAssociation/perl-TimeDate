@@ -2,7 +2,7 @@
 
 Summary:	%{modname} module for perl (Data_Type_Utilities/Time)
 Name:		perl-%{modname}
-Version:	2.33
+Version:	2.35
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -16,7 +16,7 @@ BuildRequires:	perl-devel
 Simple Time and Date module for perl.
 
 %prep
-%autosetup -p1 -n %{modname}-%{version}
+%autosetup -p1 -n TimeDate-2.35
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
