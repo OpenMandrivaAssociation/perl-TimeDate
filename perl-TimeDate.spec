@@ -26,7 +26,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %make_install
 
 %files
-%doc MANIFEST README ChangeLog
+%doc MANIFEST README Changes
 %{perl_vendorlib}/Date
 %{perl_vendorlib}/Time
 %{_datadir}/perl5/vendor_perl/TimeDate.pm
